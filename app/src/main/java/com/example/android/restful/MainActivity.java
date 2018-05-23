@@ -42,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
                 .registerReceiver(mBroadcastReceiver,
                         new IntentFilter(MyService.MY_SERVICE_MESSAGE));
 
+        networkOk = NetworkHelper.hasNetworkAccess(this);
+        output.append("Network Ok: " + networkOk);
+
+
     }
 
     @Override
